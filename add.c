@@ -8,7 +8,7 @@
 void f_add(stack_t **head, unsigned int counter)
 {
 	stack_t *h;
-	int len = 0, auxl;
+	int len = 0, aux;
 
 	h = *head;
 	while (h)
@@ -25,8 +25,8 @@ void f_add(stack_t **head, unsigned int counter)
 		exit(EXIT_FAILURE);
 	}
 	h = *head;
-	auxl = h->n + h->next->n;
-	h->next->n = auxl;
+	aux = h->n + h->next->n;
+	h->next->n = aux;
 	*head = h->next;
 	free(h);
 }

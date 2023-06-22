@@ -8,7 +8,7 @@
 void f_swap(stack_t **head, unsigned int counter)
 {
 	stack_t *h;
-	int len = 0, auxl;
+	int len = 0, aux;
 
 	h = *head;
 	while (h)
@@ -25,7 +25,7 @@ void f_swap(stack_t **head, unsigned int counter)
 		exit(EXIT_FAILURE);
 	}
 	h = *head;
-	auxl = h->n;
+	aux = h->n;
 	h->n = h->next->n;
-	h->next->n = auxl;
+	h->next->n = aux;
 }
